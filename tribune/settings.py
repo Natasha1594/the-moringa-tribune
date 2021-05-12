@@ -85,10 +85,10 @@ if config('MODE')=="dev":
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-           'NAME': config('tribune'),
-           'USER': config('natasha'),
-           'PASSWORD': config('natasha'),
-           'HOST': config('127.0.0.1'),
+           'NAME': 'tribune',
+           'USER': 'natasha',
+           'PASSWORD': 'natasha',
+           'HOST': '127.0.0.1',
            'PORT': '',
        }
        
