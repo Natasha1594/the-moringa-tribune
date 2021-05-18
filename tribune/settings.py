@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'news.apps.NewsConfig',
     'bootstrap5',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -171,6 +172,9 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "/accounts/login/"
+
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
 
@@ -180,5 +184,3 @@ django_heroku.settings(locals())
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-print("EMAIL_HOST_USER", EMAIL_HOST_USER)
-print("EMAIL_HOST_PASSWORD", EMAIL_HOST_PASSWORD)
