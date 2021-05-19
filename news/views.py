@@ -19,7 +19,7 @@ def news_today(request):
             recipient = NewsLetterRecipients(name = name,email =email)
             recipient.save()
             send_welcome_email(name,email)
-            #HttpResponseRedirect('news_today')
+            HttpResponseRedirect('news_today')
            
             
     else:
