@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     'news.apps.NewsConfig',
     'bootstrap5',
     'tinymce',
-    'restframework',
+    'rest_framework',
     'rest_framework.authtoken',
 ]
 
