@@ -27,4 +27,6 @@
         </form>
     </div>
 </div>
+{% block scripts %} {{block.super}}
+<script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script>
 {% endblock %}
