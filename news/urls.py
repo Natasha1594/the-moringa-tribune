@@ -13,6 +13,8 @@ urlpatterns=[
     path('new-article/', views.new_article, name='new-article'),
     path('ajax/newsletter/', views.newsletter, name='newsletter'),
     path('api/merch/', views.MerchList.as_view()),
+    path('api/merch/merch-id/(?P<pk>[0-9]+)/',
+        views.MerchDescription.as_view())
     ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
