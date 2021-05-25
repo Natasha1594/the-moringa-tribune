@@ -11,9 +11,8 @@ urlpatterns=[
     path('search/', views.search_results, name='search_results'),
     path('articles/<int:article_id>',views.article, name ='article'),
     path('new-article/', views.new_article, name='new-article'),
-    path('ajax/newsletter/', views.newsletter, name='newsletter')
+    path('ajax/newsletter/', views.newsletter, name='newsletter'),
     path('api/merch/', views.MerchList.as_view()),
-    
     ]
 if settings.DEBUG:
     urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
