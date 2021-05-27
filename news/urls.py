@@ -13,7 +13,7 @@ urlpatterns=[
     path('new-article/', views.new_article, name='new-article'),
     path('ajax/newsletter/', views.newsletter, name='newsletter'),
     path('api/merch/', views.MerchList.as_view()),
-    path('api/merch/merch-id/(?P<pk>[0-9]+)/',
+    path('api/merch/merch-id/<int:pk>/',
         views.MerchDescription.as_view())
     ]
 if settings.DEBUG:
